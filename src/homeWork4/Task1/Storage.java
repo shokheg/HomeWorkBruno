@@ -10,6 +10,9 @@ public class Storage {
     public Storage(int storageNumber) {
         setStorageNumber(storageNumber);
         Book[] bookStorage = new Book[20];
+        for (int i = 0; i < bookStorage.length; i++) {
+            bookStorage[i] = new Book();
+        }
         this.bookStorage = bookStorage;
     }
     public Book[] getBookStorage() {
@@ -31,7 +34,7 @@ public class Storage {
         int indexOfFirstEmptySlot = 0;
 
         for (int i = 0; i < 20; i++) {
-            if (bookStorage[i] == null){
+            if (bookStorage[i].getBookTitle() == null){
                 isEmpty = true;
                 indexOfFirstEmptySlot = i;
                break;

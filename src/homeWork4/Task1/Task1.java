@@ -33,11 +33,13 @@ public class Task1 {
         storage1.addBookToStorage(book2);
         storage1.addBookToStorage(book3);
 
+        System.out.println(storage1.getBookStorage()[2].toString());
 
-//        for (int i = 0; i < storage1.getBookStorage().length; i++) {
-//            if (storage1.getBookStorage()[i].equals(null))
-//                System.out.println(storage1.getBookStorage()[i-1].toString());
-//        }
+
+        for (int i = 0; i < storage1.getBookStorage().length; i++) {
+            if (!storage1.getBookStorage()[i].equals(null))
+                System.out.println("Содержимое ячейки № " + i + " " + storage1.getBookStorage()[i].toString());
+        }
 
 
     }

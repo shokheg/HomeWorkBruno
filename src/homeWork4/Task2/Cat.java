@@ -13,7 +13,11 @@ public class Cat {
     public Cat(int speed, int weight) {
         setSpeed(speed);
         setWeight(weight);
-        this.mouses = new Mouse[20];
+        Mouse[] mouses = new Mouse[20];
+        for (int i = 0; i <mouses.length ; i++) {
+            mouses[i] = new Mouse();
+        }
+        this.mouses = mouses;
     }
 
     public String getName() {

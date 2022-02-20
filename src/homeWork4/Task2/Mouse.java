@@ -7,6 +7,9 @@ public class Mouse {
     public Mouse(int speed) {
         setSpeed(speed);
     }
+    public Mouse() {
+
+    }
 
     public int getSpeed() {
         return speed;
