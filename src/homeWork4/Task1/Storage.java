@@ -7,9 +7,10 @@ public class Storage {
 
 
 
-    public Storage(Book[] bookStorage, int storageNumber) {
+    public Storage(int storageNumber) {
         setStorageNumber(storageNumber);
-        setBookStorage(bookStorage);
+        Book[] bookStorage = new Book[20];
+        this.bookStorage = bookStorage;
     }
     public Book[] getBookStorage() {
         return bookStorage;
@@ -24,11 +25,22 @@ public class Storage {
         this.storageNumber = storageNumber;
     }
 
-    public void addBookToStorage(Book book, Book[] bookStorage ){
+    public void addBookToStorage(Book book){
+
+        boolean isEmpty = false;
+        int indexOfFirstEmptySlot = 0;
+
         for (int i = 0; i < 20; i++) {
             if (bookStorage[i] == null){
-                bookStorage[i] = book;
-            } else System.out.println("Хранилище переполнено");
+                isEmpty = true;
+                indexOfFirstEmptySlot = i;
+               break;
+            }
+        }
+
+        if (isEmpty) {
+            bookStorage[indexOfFirstEmptySlot] = book;
+            System.out.println("Книга уложена в слот № " + indexOfFirstEmptySlot);
         }
 
     }

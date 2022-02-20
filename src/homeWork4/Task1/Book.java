@@ -8,7 +8,7 @@ public class Book {
     private String bookTitle;
     private int pages;
     private int year;
-    private String[] authors;
+    private Author[] authors;
 
 
 
@@ -39,11 +39,11 @@ public class Book {
         this.year = year;
     }
 
-    public String[] getAuthors() {
+    public Author[] getAuthors() {
         return authors;
     }
 
-    public void setAuthors(String[] authors) {
+    public void setAuthors(Author[] authors) {
         this.authors = authors;
     }
 

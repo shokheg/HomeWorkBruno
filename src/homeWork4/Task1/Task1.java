@@ -4,8 +4,11 @@ public class Task1 {
     public static void main(String[] args) {
 
         Book book1 = new Book();
+        book1.setBookTitle("AAAA");
         Book book2 = new Book();
+        book2.setBookTitle("BBBB");
         Book book3 = new Book();
+        book3.setBookTitle("CCCC");
         Book book4 = new Book();
         Book book6 = new Book();
         Book book7 = new Book();
@@ -24,13 +27,17 @@ public class Task1 {
         Book book20 = new Book();
         Book book21 = new Book();
         Book book22 = new Book();
-        Book[] books = new Book[20];
-        Storage storage1 = new Storage(books, 21);
-        storage1.addBookToStorage(book1,storage1.getBookStorage());
 
-        for (int i = 0; i < storage1.getBookStorage().length; i++) {
-            System.out.println(storage1.getBookStorage()[i].toString());
-        }
+        Storage storage1 = new Storage(21);
+        storage1.addBookToStorage(book1);
+        storage1.addBookToStorage(book2);
+        storage1.addBookToStorage(book3);
+
+
+//        for (int i = 0; i < storage1.getBookStorage().length; i++) {
+//            if (storage1.getBookStorage()[i].equals(null))
+//                System.out.println(storage1.getBookStorage()[i-1].toString());
+//        }
 
 
     }
