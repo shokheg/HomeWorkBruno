@@ -10,7 +10,12 @@ public class Book {
     private int year;
     private Author[] authors;
 
-
+    public Book (String bookTitle){
+        this.year = 0;
+        this.pages = 0;
+        this.bookTitle = bookTitle;
+        this.authors = new Author[20];
+    }
 
     public String getBookTitle() {
         return bookTitle;
@@ -22,17 +27,17 @@ public class Book {
         this.bookTitle = bookTitle;
     }
 
-//    public int getPages() {
-//        return pages;
-//    }
-//
-//    public void setPages(int pages) {
-//        this.pages = pages;
-//    }
-//
-//    public int getYear() {
-//        return year;
-//    }
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public int getYear() {
+        return year;
+    }
 
     public void setYear(int year) {
         if (this.year>Year.now().getValue()) throw new IllegalArgumentException("Значение года должно быть меньше");
