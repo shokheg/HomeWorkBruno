@@ -10,9 +10,6 @@ public class Storage {
     public Storage(int storageNumber) {
         setStorageNumber(storageNumber);
         Book[] bookStorage = new Book[20];
-//        for (int i = 0; i < bookStorage.length; i++) {
-//            bookStorage[i] = new Book();
-//        }
         this.bookStorage = bookStorage;
     }
     public Book[] getBookStorage() {

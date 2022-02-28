@@ -14,9 +14,6 @@ public class Cat {
         setSpeed(speed);
         setWeight(weight);
         Mouse[] mouses = new Mouse[20];
-        for (int i = 0; i <mouses.length ; i++) {
-            mouses[i] = new Mouse();
-        }
         this.mouses = mouses;
     }
 
