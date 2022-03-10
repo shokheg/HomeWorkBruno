@@ -14,7 +14,7 @@ public class Task1 {
 
     static void isArraySort(int[] arr){   //сложность алгоритма O(n)
 
-        for (int i = 0; i < arr.length-2; i++) {
+        for (int i = 0; i < arr.length-1; i++) {
             if (arr[i]<arr[i+1]) System.out.println("Массив не отсортирован по убыванию");
         }
 
