@@ -54,11 +54,10 @@ public class Account {
     }
 
     public double deposit(int yearsNum, double percent) {
-        double result = balance;
         for (int i = 0; i < yearsNum; i++) {
-            result = (result * (100 + percent)) / 100;
+            balance = (balance * (100 + percent)) / 100;
         }
-        return result;
+        return balance;
     }
 
     @Override
